@@ -4,7 +4,7 @@ mysql-proxy-obfuscator
 mysql-proxy-obfuscator is a Lua script which can be added to the excellent MySQL proxy to create an obfuscated dump of data straight out of mysql.
 The intended operation is to install MySQL proxy and start a proxy server with the 'obfuscator.lua' script:
 
-  /usr/local/mysql-proxy/bin/mysql-proxy --log-level=debug --proxy-lua-script=/usr/local/mysql-proxy/lib/mysql-proxy/lua/obfuscator.lua
+  `/usr/local/mysql-proxy/bin/mysql-proxy --log-level=debug --proxy-lua-script=/usr/local/mysql-proxy/lib/mysql-proxy/lua/obfuscator.lua`
   
 By default this will replace all strings in your mysqldump with random strings the same length as the original string. Formatting is not preserved!
 
@@ -14,10 +14,10 @@ The obfuscation script will automatically load your definitions as part of initi
 
 For example
 
-  my_table = {}
+  `my_table = {}
   function my_table.firstname(original_value)
     return 'your my_table.firstname column will be filled with this string instead of the random chars'
-  end
+  end`
   
 It's your responsibility to ensure the return value length does not exceed the column length.
 
