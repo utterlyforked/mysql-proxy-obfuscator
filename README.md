@@ -4,11 +4,11 @@ mysql-proxy-obfuscator
 mysql-proxy-obfuscator is a Lua script which can be added to the excellent MySQL proxy to create an obfuscated dump of data straight out of mysql.
 The intended operation is to install MySQL proxy and start a proxy server with the 'obfuscator.lua' script:
 
-  `/usr/local/mysql-proxy/bin/mysql-proxy --log-level=debug --proxy-lua-script=/usr/local/mysql-proxy/lib/mysql-proxy/lua/obfuscator.lua`
+  `/usr/local/mysql-proxy/bin/mysql-proxy --proxy-lua-script=/usr/local/mysql-proxy/lib/mysql-proxy/lua/obfuscator.lua`
   
 By default this will replace all strings in your mysqldump with random strings the same length as the original string. Formatting is not preserved!
 
-You can further enhance the obfuscation method my creating local definitions in definitions.lua script, some have been provided and pull requests are greatly received.
+You can further enhance the obfuscation method by creating local definitions in **definitions.lua** script, some have been provided and pull requests are greatly received.
 Create a Lua table named after the schema you wish to affect, then create a function within that schema the matches the column you wish to obfuscate. 
 The obfuscation script will automatically load your definitions as part of initiliastion.
 
