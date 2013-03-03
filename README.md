@@ -24,3 +24,7 @@ It's your responsibility to ensure the return value length does not exceed the c
 The benefit of this method is that we don't need to dump the data before obfuscating it so we can be sure we're controlling acccess to sensitive data. 
 
 More details about MySQL proxy can be found at http://dev.mysql.com/downloads/mysql-proxy/ including instructions of how to install it.
+
+Once you have MySQL proxy installed, you can use mysqldump as you normally would, but, specify the MySQL proxy port instead of your normal MySQL port (3306)
+
+    mysqldump schema_name -P4040 > schema_name.sql
