@@ -14,10 +14,10 @@ The obfuscation script will automatically load your definitions as part of initi
 
 For example
 
-  `my_table = {}
-  function my_table.firstname(original_value)
-    return 'your my_table.firstname column will be filled with this string instead of the random chars'
-  end`
+  `my_table = {}`
+  `function my_table.firstname(original_value)`
+    `return 'your my_table.firstname column will be filled with this string instead of the random chars'`
+  `end`
   
 It's your responsibility to ensure the return value length does not exceed the column length.
 
