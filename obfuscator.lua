@@ -1,4 +1,4 @@
-require "table-definition"
+require "definitions"
 
 local Chars = {}
 for Loop = 0, 255 do
