@@ -10,7 +10,7 @@ By default this will replace all strings in your mysqldump with random strings t
 
 You can further enhance the obfuscation method by creating local definitions in **definitions.lua** script, some have been provided and pull requests are greatly received.
 Create a Lua table named after the schema you wish to affect, then create a function within that schema the matches the column you wish to obfuscate. 
-The obfuscation script will automatically load your definitions as part of initiliastion.
+The obfuscation script will automatically load your definitions as part of initialisation.
 
 For example
 
