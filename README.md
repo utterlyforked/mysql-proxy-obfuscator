@@ -6,7 +6,7 @@ The intended operation is to install MySQL proxy and start a proxy server with t
 
   `/usr/local/mysql-proxy/bin/mysql-proxy --proxy-lua-script=/usr/local/mysql-proxy/lib/mysql-proxy/lua/obfuscator.lua`
   
-By default this will replace all strings in your mysqldump with random strings the same length as the original string. Formatting is not preserved!
+By default this will replace all strings in your mysqldump with random strings the same length as the original string. Formatting is not preserved! Any none string field, enum, bools, ints etc are left in-tact. This should retain referential integrity, but, if you're storing identifiable data in numbers alone, you'll need to create local definition instead.
 
 You can further enhance the obfuscation method by creating local definitions in **definitions.lua** script, some have been provided and pull requests are greatly received.
 Create a Lua table named after the schema you wish to affect, then create a function within that schema the matches the column you wish to obfuscate. 
