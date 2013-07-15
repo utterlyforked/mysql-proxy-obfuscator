@@ -68,6 +68,9 @@ function read_query_result(inj)
     
     for row in inj.resultset.rows do
         for n = 1, #row do
+            if row[n] == nil then
+                break
+            end
             local fieldValue 
             if _G[schemaName] and _G[schemaName][fields[n].name] then
                 row[n] = _G[schemaName][fields[n].name](row[n])
