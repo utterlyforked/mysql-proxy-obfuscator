@@ -28,3 +28,5 @@ More details about MySQL proxy can be found at http://dev.mysql.com/downloads/my
 Once you have MySQL proxy installed, you can use mysqldump as you normally would, but, specify the MySQL proxy port instead of your normal MySQL port (3306)
 
     mysqldump schema_name -P4040 > schema_name.sql
+
+hacky git check
